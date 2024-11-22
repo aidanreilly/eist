@@ -13,3 +13,8 @@ Maybe:
 https://github.com/jailsonsb2/RadioPlayer
 
 https://github.com/SH20RAJ/soundwave
+
+https://github.com/sampotts/plyr
+
+
+{{< audio src="http://stream-relay-geo.ntslive.net/stream" >}}

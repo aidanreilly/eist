@@ -1,0 +1,23 @@
+{{ $src := .Get "src" -}}
+<div class="audio-player">
+    <a href="#" onclick="
+      if (!window.currentAudio) {
+          window.currentAudio = new Audio('{{ $src }}');
+          window.currentAudio.play();
+          document.querySelector('.player-button').classList.add('playing');
+          document.querySelector('.control').textContent = '⏸ PAUSE';
+      } else if (window.currentAudio.paused) {
+          window.currentAudio.play();
+          document.querySelector('.player-button').classList.add('playing');
+          document.querySelector('.control').textContent = '⏸ PAUSE';
+      } else {
+          window.currentAudio.pause();
+          document.querySelector('.player-button').classList.remove('playing');
+          document.querySelector('.control').textContent = '► PLAY';
+      }
+      return false;">
+      <div style="text-align: center" class="player-button">
+        <p class="control">► PLAY</p>
+      </div>
+    </a>
+</div>
